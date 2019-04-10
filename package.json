@@ -1,14 +1,15 @@
 {
   "name": "categories",
   "version": "1.0.0",
-  "description": "",
+  "description": "Categories API for Code Challenges",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start pm2.config.js --no-daemon",
+    "start": "pm2-docker pm2.config.js --no-daemon",
     "start:dev": "nodemon"
   },
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "author": "@vitorsalgado",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
     "hapi": "^18.1.0",
