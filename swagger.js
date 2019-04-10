@@ -6,6 +6,7 @@ module.exports = {
     plugin: Swagger,
     options: {
         auth: false,
+        schemes: ['http', 'https'],
         tags: [
             {
                 name: 'catalog',
