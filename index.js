@@ -9,7 +9,7 @@ const Swagger = require('./swagger')
 const SwaggerUi = require('./swagger-ui')
 
 const Port = process.env.PORT || 3000
-const Server = Hapi.server({ connections: { compression: false }, port: Port, host: '0.0.0.0' })
+const Server = Hapi.server({ compression: false, port: Port, host: '0.0.0.0' })
 
 Server.route(
     {
