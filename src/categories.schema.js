@@ -6,27 +6,32 @@ module.exports = Joi.object(
     {
         id: Joi.string(),
         name: Joi.string(),
+        relevance: Joi.number(),
         subcategories: Joi.array().items(Joi.object(
             {
                 id: Joi.string(),
                 name: Joi.string(),
+                relevance: Joi.number(),
                 subcategories: Joi.array()
                     .items(Joi.object(
                         {
                             id: Joi.string(),
                             name: Joi.string(),
+                            relevance: Joi.number(),
                             iconImageUrl: Joi.string(),
                             subcategories: Joi.array().items(Joi.object(
                                 {
                                     id: Joi.string(),
                                     name: Joi.string(),
+                                    relevance: Joi.number(),
                                     largeImageUrl: Joi.string(),
                                     mediumImageUrl: Joi.string(),
                                     smallImageUrl: Joi.string(),
                                     subcategories: Joi.array().items(Joi.object(
                                         {
                                             id: Joi.string(),
-                                            name: Joi.string()
+                                            name: Joi.string(),
+                                            relevance: Joi.number()
                                         })
                                         .meta({ className: 'Subcategory Level 4' })
                                         .unknown(true)

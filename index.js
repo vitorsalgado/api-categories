@@ -3,10 +3,10 @@
 const Hapi = require('hapi')
 const Inert = require('inert')
 const Vision = require('vision')
-const Categories = require('./categories')
-const CategoriesSchema = require('./categories.schema')
-const Swagger = require('./swagger')
-const SwaggerUi = require('./swagger-ui')
+const Categories = require('./src/categories')
+const CategoriesSchema = require('./src/categories.schema')
+const Swagger = require('./src/swagger')
+const SwaggerUi = require('./src/swagger-ui')
 
 const Port = process.env.PORT || 3000
 const Server = Hapi.server({ compression: false, port: Port, host: '0.0.0.0' })
@@ -27,5 +27,5 @@ Server
     .register([Inert, Vision, Swagger, SwaggerUi])
     .then(() =>
         Server.start()
-            .then(() => console.log(`categories API is online on port: ${Port}`))
+            .then(() => console.log(`Categories API is online on port: ${Port}`))
             .catch(console.error))
